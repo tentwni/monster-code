@@ -24,6 +24,7 @@
       max-width: 800px;
       margin: auto;
       background: white;
+      color: #222;
       padding: 20px;
       border-radius: 10px;
     }
@@ -85,7 +86,7 @@
       margin-bottom: 5px;
     }
     #endMessage {
-      color: #000000;
+      color: #222;
       font-size: 28px;
       font-weight: bold;
     }
@@ -218,6 +219,15 @@
      document.getElementById("progressBar").style.width = `${percent}%`;
    }
 
+    function toggleMusic() {
+      const music = document.getElementById("bgMusic")
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+    
     function showMonster() {
       playerHP = 3;
       monsterHP = 3;
